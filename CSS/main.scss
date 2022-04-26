@@ -1,0 +1,136 @@
+//colors
+$colorSoftblue: hsl(215, 51%, 70%);
+$colorCyan: hsl(178, 100%, 50%);
+
+$colorVerydarkbluemainBG: hsl(217, 54%, 11%);
+$colorVerydarkbluecardBG: hsl(216, 50%, 16%);
+$colorVerydarkblueline: hsl(215, 32%, 27%);
+$colorWhite: hsl(0, 0%, 100%);
+
+body {
+    background-color: $colorVerydarkbluemainBG;
+    font-family: 'Outfits',sans-serif;
+    font-size: 18px;
+}
+
+.container {
+    background-color: $colorVerydarkbluecardBG ;
+    width: 300px;
+    padding: 25px;
+    border-radius: 5%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    * {
+        padding-bottom: 15px;
+    }
+
+    .NFT {
+        position: relative;
+        width: 100%;
+        border-radius: 5%;
+        .NFT__img {
+            display: block;
+            width: 100%;
+            padding: 0;
+        }
+        .NFT__overlay {
+            position: absolute;
+            width: 60px;
+            top: 0;
+            left: 0;
+            padding: 120px;
+            opacity: 0;
+        }
+        .NFT__overlay:hover {
+            opacity: 0.6;
+            background-color: $colorCyan;
+        }
+    }
+
+    .title {
+        color: $colorWhite;
+        font-weight: 600;
+        font-size: larger;
+        
+    }
+    .title:hover {
+        color: $colorCyan;
+    }
+    .desc {
+        color:$colorSoftblue ;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 1.5em;
+        
+    }
+    .flexbox-pricetime {
+        word-break: keep-all;
+        display: flex;
+        padding: 0;
+        justify-content: space-between;
+        .flexbox-price {
+            display: flex;
+            padding: 0;
+            .Ether-icon,.price {
+                font-size: smaller;
+                font-weight: bold;
+                color: $colorCyan;
+                padding-bottom: 10px;
+            }
+            .price{
+                padding-left: 10px;
+            }
+        }
+        .flexbox-time {
+            display: flex;
+            padding: 0;
+            .clock-icon, .time {
+                font-size: smaller;
+                font-weight: 400;
+                color: $colorSoftblue;
+                padding-bottom: 10px;
+            }
+            .time {
+                padding-left: 10px;
+                width: 70px;
+            }
+        }
+    }
+
+    hr {
+        height: 0.1px;
+        padding: 0;
+        border-width: 0px;
+        background-color: $colorVerydarkblueline;
+    }
+    .flexbox-creator {
+        padding: 10px;
+        display: flex;
+        .creator-photo {
+            height: 2em;
+            border-width: 2px;
+            border-color:  $colorWhite;
+            border-style: solid;
+            padding: 0;
+            border-radius: 50%;
+        }
+        .creator {
+            padding-left: 15px;
+            padding-bottom: 0;
+            align-self: center;
+            font-weight: 300;
+            font-size: smaller;
+            color: $colorSoftblue;
+            .creator-name {
+                color: $colorWhite;
+            }
+            .creator-name:hover {
+                color: $colorCyan;
+            }
+        }
+    }
+
+}
